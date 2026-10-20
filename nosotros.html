@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JR Joyería</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<nav id="navbar">
+	<div class="navbar-container">
+		<button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<a href="index.html" class="navbar-logo">
+			<div class="gold-border">
+				<span class="logo-mark text-gold-gradient">JR</span>
+			</div>
+		</a>
+		<div class="desktop-menu">
+			<a href="index.html">INICIO</a>
+			<a href="colecciones.html">COLECCIONES</a>
+			<a href="nosotros.html">NOSOTROS</a>
+		</div>
+		<div class="navbar-right"></div>
+	</div>
+</nav>
+
+<div id="mobileMenu" class="mobile-menu">
+	<button id="closeMobileMenu" class="close-mobile-menu">×</button>
+	<div class="mobile-menu-links">
+		<a href="index.html">INICIO</a>
+		<a href="colecciones.html">COLECCIONES</a>
+		<a href="nosotros.html">NOSOTROS</a>
+	</div>
+</div>
+
+<div id="mobileOverlay" class="mobile-overlay"></div>
+
+<section id="inicio" style="position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden;">
+  <div style="position: absolute; inset: 0;">
+    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1920&h=1080&fit=crop" alt="JR Joyería" style="width: 100%; height: 100%; object-fit: cover; 
+    opacity: 0.6;" />
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4), #0a0a0a);"></div>
+  </div>
+
+  <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+  <div class="sparkle" style="top: 40%; left: 75%; animation-delay: 0.5s;"></div>
+  <div class="sparkle" style="top: 60%; left: 25%; animation-delay: 1s;"></div>
+
+  <div style="position: relative; z-index: 10; max-width: 80rem; margin: 0 auto; padding: 8rem 1.5rem 2rem; width: 100%;">
+    <div style="max-width: 42rem;">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;" class="reveal">
+        <div class="gold-divider"></div>
+        <span style="font-size: 0.75rem; letter-spacing: 0.4em; color: #c9a961; text-transform: uppercase;">Nuestro comienzo</span>
+      </div>
+      <h1 class="font-serif reveal nosotros-hero-title" style="line-height: 0.95; margin-bottom: 2rem;">
+        <span style="display: block; color: #f5f0e8;">Una marca</span>
+        <span style="display: block;" class="text-gold-gradient">que comienza</span>
+        <span style="display: block; color: #f5f0e8;">contigo</span>
+      </h1>
+      <p class="reveal" style="font-size: 1.25rem; color: rgba(245,240,232,0.8); max-width: 32rem; margin-bottom: 2.5rem; line-height: 1.7;">
+        JR Joyería inicia su camino en el mercado con una propuesta de joyas para acompañar tus momentos y expresar tu estilo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--SPAN-->
+  <div style="border-top: 1px solid rgba(201,169,97,0.2); border-bottom: 1px solid rgba(201,169,97,0.2); padding: 1.5rem 0; overflow: hidden; background: #0a0a0a;">
+    <div class="marquee-track" style="display: flex; white-space: nowrap;">
+      <div style="display: flex; align-items: center; gap: 3rem; padding: 0 1.5rem; color: rgba(201,169,97,0.6); letter-spacing: 0.3em; font-size: 0.875rem; text-transform: uppercase;">
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+      </div>
+    </div>
+  </div>
+
+<section id="nosotros" style="padding: 6rem 0; background: #0a0a0a; position: relative; overflow: hidden;">
+
+
+  <div style="max-width: 80rem; margin: 0 auto; padding: 0 1.5rem;">
+    <div class="nosotros-story-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div class="reveal">
+        <span style="font-size: 0.75rem; letter-spacing: 0.4em; color: #c9a961; text-transform: uppercase;">Quiénes somos</span>
+        <h2 class="font-serif nosotros-story-title" style="margin-top: 1rem; margin-bottom: 2rem;">
+          Estamos empezando.<br>
+          <span class="text-gold-gradient" style="font-style: italic;">Crecemos contigo.</span>
+        </h2>
+        <div class="gold-divider" style="margin-bottom: 2rem;"></div>
+        <p style="font-size: 1.125rem; color: rgba(245,240,232,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+          JR Joyería es una empresa que apenas inicia su camino en el mercado. Nacemos con la ilusión de acercarte joyas que reflejen tu personalidad y formen parte de tus momentos especiales.
+        </p>
+        <p style="color: rgba(245,240,232,0.7); line-height: 1.7; margin-bottom: 2.5rem;">
+          Estamos construyendo nuestra propuesta paso a paso, escuchando a quienes nos eligen y trabajando para ofrecer una experiencia de compra sencilla, transparente y cercana.
+        </p>
+
+        <div class="nosotros-values" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid rgba(201,169,97,0.2);">
+          <div>
+            <div class="font-serif nosotros-value-title">Nuestro inicio</div>
+            <div class="nosotros-value-copy">Una marca nueva con mucho por compartir.</div>
+          </div>
+          <div>
+            <div class="font-serif nosotros-value-title">Cada detalle</div>
+            <div class="nosotros-value-copy">Joyas para expresar tu estilo.</div>
+          </div>
+          <div>
+            <div class="font-serif nosotros-value-title">Cerca de ti</div>
+            <div class="nosotros-value-copy">Atención directa y amable.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="position: relative;">
+        <div style="aspect-ratio: 4/5; overflow: hidden;">
+          <img src="img/balinesprin.jpg" alt="Selección de balines de oro de JR Joyería" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+      </div>
+
+      <div class="home-collections-actions">
+      <a href="colecciones.html" class="btn-gold">Ver colecciones</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

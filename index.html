@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JR Joyería</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<nav id="navbar">
+	<div class="navbar-container">
+		<button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<a href="index.html" class="navbar-logo">
+			<div class="gold-border">
+				<span class="logo-mark text-gold-gradient">JR</span>
+			</div>
+		</a>
+		<div class="desktop-menu">
+			<a href="index.html">INICIO</a>
+			<a href="colecciones.html">COLECCIONES</a>
+			<a href="nosotros.html">NOSOTROS</a>
+		</div>
+		<div class="navbar-right"></div>
+	</div>
+</nav>
+
+<div id="mobileMenu" class="mobile-menu">
+	<button id="closeMobileMenu" class="close-mobile-menu">×</button>
+	<div class="mobile-menu-links">
+		<a href="index.html">INICIO</a>
+		<a href="colecciones.html">COLECCIONES</a>
+		<a href="nosotros.html">NOSOTROS</a>
+	</div>
+</div>
+
+<!--FONDO OSCURO-->
+<div id="mobileOverlay" class="mobile-overlay"></div>
+
+<section id="inicio" style="position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden;">
+  <div style="position: absolute; inset: 0;">
+    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1920&h=1080&fit=crop" alt="JR Joyería" style="width: 100%; height: 100%; object-fit: cover; 
+    opacity: 0.6;" />
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4), #0a0a0a);"></div>
+  </div>
+
+  <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+  <div class="sparkle" style="top: 40%; left: 75%; animation-delay: 0.5s;"></div>
+  <div class="sparkle" style="top: 60%; left: 25%; animation-delay: 1s;"></div>
+
+  <div style="position: relative; z-index: 10; max-width: 80rem; margin: 0 auto; padding: 8rem 1.5rem 2rem; width: 100%;">
+    <div style="max-width: 42rem;">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;" class="reveal">
+        <div class="gold-divider"></div>
+        <span style="font-size: 0.75rem; letter-spacing: 0.4em; color: #c9a961; text-transform: uppercase;">Desde 2026</span>
+      </div>
+      <h1 class="font-serif reveal" style="font-size: 5rem; line-height: 0.95; margin-bottom: 2rem;">
+        <span style="display: block; color: #f5f0e8;">Elegancia</span>
+        <span style="display: block;" class="text-gold-gradient">Atemporal</span>
+        <span style="display: block; color: #f5f0e8;">en cada pieza</span>
+      </h1>
+      <p class="reveal" style="font-size: 1.25rem; color: rgba(245,240,232,0.8); max-width: 32rem; margin-bottom: 2.5rem; line-height: 1.7;">
+        Descubre la colección JR: joyas artesanales creadas con los materiales más nobles, diseñadas para contar tu historia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div style="border-top: 1px solid rgba(201,169,97,0.2); border-bottom: 1px solid rgba(201,169,97,0.2); padding: 1.5rem 0; overflow: hidden; background: #0a0a0a;">
+  <div class="marquee-track" style="display: flex; white-space: nowrap;">
+    <div style="display: flex; align-items: center; gap: 3rem; padding: 0 1.5rem; color: rgba(201,169,97,0.6); letter-spacing: 0.3em; font-size: 0.875rem; text-transform: uppercase;">
+      <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+    </div>
+  </div>
+</div>
+
+
+<section class="home-collections" aria-labelledby="home-collections-title">
+  <div class="home-collections-inner">
+    <header class="home-collections-heading">
+      <div>
+        <div class="home-collections-kicker">
+          <span class="gold-divider" aria-hidden="true"></span>
+          <span>Selección JR</span>
+        </div>
+        <h2 id="home-collections-title" class="font-serif">
+          Piezas para <span class="text-gold-gradient">llevar tu historia.</span>
+        </h2>
+      </div>
+      <p>Encuentra ese detalle especial entre diseños pensados para acompañarte todos los días.</p>
+    </header>
+
+    <div class="home-collections-grid">
+      <a class="home-collection-card" href="anillos.html">
+        <img src="img/anillosprincipales.jpg" alt="Anillos de oro de la colección JR" loading="lazy">
+        <span class="home-collection-shade" aria-hidden="true"></span>
+        <span class="home-collection-copy">
+          <span class="home-collection-index">01 / ESENCIALES</span>
+          <span class="home-collection-name font-serif">Anillos</span>
+          <span class="home-collection-link">Ver colección <span aria-hidden="true">-></span></span>
+        </span>
+      </a>
+
+      <a class="home-collection-card" href="aretes.html">
+        <img src="img/aretesprin.jpg" alt="Aretes dorados de la colección JR" loading="lazy">
+        <span class="home-collection-shade" aria-hidden="true"></span>
+        <span class="home-collection-copy">
+          <span class="home-collection-index">02 / DETALLES</span>
+          <span class="home-collection-name font-serif">Aretes</span>
+          <span class="home-collection-link">Ver colección <span aria-hidden="true">-></span></span>
+        </span>
+      </a>
+
+      <a class="home-collection-card" href="balines.html">
+        <img src="img/balinesprin.jpg" alt="Balines de oro de la colección JR" loading="lazy">
+        <span class="home-collection-shade" aria-hidden="true"></span>
+        <span class="home-collection-copy">
+          <span class="home-collection-index">03 / FAVORITOS</span>
+          <span class="home-collection-name font-serif">Balines</span>
+          <span class="home-collection-link">Ver colección <span aria-hidden="true">-></span></span>
+        </span>
+      </a>
+
+    <a class="home-collection-card" href="herrajes.html">
+        <img src="img/herraje.jpg" alt="Herrajes de oro de la colección JR" loading="lazy">
+        <span class="home-collection-shade" aria-hidden="true"></span>
+        <span class="home-collection-copy">
+          <span class="home-collection-index">04 / ACCESORIOS</span>
+          <span class="home-collection-name font-serif">Herrajes</span>
+          <span class="home-collection-link">Ver colección <span aria-hidden="true">-></span></span>
+        </span>
+      </a>
+    </div>
+
+    <div class="home-collections-actions">
+      <a href="colecciones.html" class="btn-gold">Ver colecciones</a>
+      <a href="nosotros.html" class="btn-outline">Nosotros</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background: #0a0a0a; border-top: 1px solid rgba(201,169,97,0.2); padding: 3rem 0 2rem;">
+  <div style="max-width: 80rem; margin: 0 auto; padding: 0 1.5rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid rgba(201,169,97,0.1); flex-wrap: wrap; gap: 1rem;">
+      <p style="font-size: 0.75rem; color: rgba(245,240,232,0.4);">© 2026 JR Joyería. Todos los derechos reservados.</p>
+      <div style="display: flex; gap: 1.5rem; font-size: 0.75rem; color: rgba(245,240,232,0.4);">
+        <a href="#" style="color: rgba(245,240,232,0.4);">Términos</a>
+        <a href="#" style="color: rgba(245,240,232,0.4);">Privacidad</a>
+        <a href="#" style="color: rgba(245,240,232,0.4);">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" style="position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 150; background: #c9a961; color: #0a0a0a; padding: 1rem 1.5rem; 
+box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: translateY(6rem); opacity: 0; transition: all 0.5s; display: flex; align-items: center; gap: 0.75rem;">
+  <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" 
+    stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+  <span id="toastMsg" style="font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em;"></span>
+</div>
+
+</body>
+</html>

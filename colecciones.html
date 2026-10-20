@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JR Joyería</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<nav id="navbar">
+	<div class="navbar-container">
+		<button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<a href="index.html" class="navbar-logo">
+			<div class="gold-border">
+				<span class="logo-mark text-gold-gradient">JR</span>
+			</div>
+		</a>
+		<div class="desktop-menu">
+			<a href="index.html">INICIO</a>
+			<a href="colecciones.html">COLECCIONES</a>
+			<a href="nosotros.html">NOSOTROS</a>
+		</div>
+		<div class="navbar-right"></div>
+	</div>
+</nav>
+
+<div id="mobileMenu" class="mobile-menu">
+	<button id="closeMobileMenu" class="close-mobile-menu">×</button>
+	<div class="mobile-menu-links">
+		<a href="index.html">INICIO</a>
+		<a href="colecciones.html">COLECCIONES</a>
+		<a href="nosotros.html">NOSOTROS</a>
+	</div>
+</div>
+
+<!--FONDO OSCURO-->
+<div id="mobileOverlay" class="mobile-overlay"></div>
+
+<section id="colecciones" style="padding: 6rem 0; background: #0a0a0a;">
+
+  <!--SPAN-->
+  <div style="border-top: 1px solid rgba(201,169,97,0.2); border-bottom: 1px solid rgba(201,169,97,0.2); padding: 1.5rem 0; overflow: hidden; background: #0a0a0a;">
+    <div class="marquee-track" style="display: flex; white-space: nowrap;">
+      <div style="display: flex; align-items: center; gap: 3rem; padding: 0 1.5rem; color: rgba(201,169,97,0.6); letter-spacing: 0.3em; font-size: 0.875rem; text-transform: uppercase;">
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+      </div>
+    </div>
+  </div><br>
+
+  <div style="max-width: 80rem; margin: 0 auto; padding: 0 1.5rem;">
+    <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+      <span style="font-size: 0.75rem; letter-spacing: 0.4em; color: #c9a961; text-transform: uppercase;">Nuestras categorías</span>
+      <h2 class="font-serif" style="font-size: 3.5rem; margin-top: 1rem; margin-bottom: 1.5rem;">Colecciones</h2>
+      <div class="gold-divider" style="margin: 0 auto;"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+      <a href="anillos.html"> 
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="img/anillosprincipales.jpg" alt="Anillos" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">01</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Anillos</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">Solitarios, alianzas y diseños únicos</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="collares.html">
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop" alt="Collares" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">02</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Cadenas</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">Cadenas, gargantillas y colgantes</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="pulseras.html">
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=800&fit=crop" alt="Pulseras" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">03</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Pulseras</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">Brazalete, esclavas y tenis</p>
+          </div>
+        </div>
+      </a>
+      <a href="aretes.html">
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="img/aretesprin.jpg" alt="Aretes" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">04</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Aretes</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">De botón, colgantes y aros</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="balines.html">
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="img/balinesprin.jpg" alt="Balines" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">05</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Balines</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">Diamantados, lisos</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="dijes.html">
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="img/dijes.jpg" alt="Dijes" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">06</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Dijes</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">Diamantados, lisos</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="herrajes.html">
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="img/herraje.jpg" alt="Herrajes" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">07</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Herrajes</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">Diamantados, lisos</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="rosarios.html">
+        <div class="category-card reveal" style="height: 24rem; cursor: pointer;">
+          <img src="img/rosario.jpg" alt="Rosario camándula de oro" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="cat-content" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;">
+            <div style="font-size: 0.75rem; letter-spacing: 0.3em; color: #c9a961; margin-bottom: 0.5rem;">08</div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Rosarios</h3>
+            <p style="font-size: 0.875rem; color: rgba(245,240,232,0.7); margin-bottom: 1rem;">Rosarios y camándulas</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>

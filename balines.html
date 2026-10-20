@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JR Joyería</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<nav id="navbar">
+	<div class="navbar-container">
+		<button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Abrir menú">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<a href="index.html" class="navbar-logo">
+			<div class="gold-border">
+				<span class="logo-mark text-gold-gradient">JR</span>
+			</div>
+		</a>
+		<div class="desktop-menu">
+			<a href="index.html">INICIO</a>
+			<a href="colecciones.html">COLECCIONES</a>
+			<a href="nosotros.html">NOSOTROS</a>
+		</div>
+		<div class="navbar-right"></div>
+	</div>
+</nav>
+
+<div id="mobileMenu" class="mobile-menu">
+	<button id="closeMobileMenu" class="close-mobile-menu">×</button>
+	<div class="mobile-menu-links">
+		<a href="index.html">INICIO</a>
+		<a href="colecciones.html">COLECCIONES</a>
+		<a href="nosotros.html">NOSOTROS</a>
+	</div>
+</div>
+
+<!--FONDO OSCURO-->
+<div id="mobileOverlay" class="mobile-overlay"></div>
+
+<section id="nosotros" style="padding: 6rem 0; background: #0a0a0a; position: relative; overflow: hidden;">
+
+  <!--SPAN-->
+  <div style="border-top: 1px solid rgba(201,169,97,0.2); border-bottom: 1px solid rgba(201,169,97,0.2); padding: 1.5rem 0; overflow: hidden; background: #0a0a0a;">
+    <div class="marquee-track" style="display: flex; white-space: nowrap;">
+      <div style="display: flex; align-items: center; gap: 3rem; padding: 0 1.5rem; color: rgba(201,169,97,0.6); letter-spacing: 0.3em; font-size: 0.875rem; text-transform: uppercase;">
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+        <span>✦ Una marca nueva</span>
+        <span>✦ Joyas en oro 18k</span>
+        <span>✦ Atención cercana</span>
+        <span>✦ Envíos nacionales</span>
+      </div>
+    </div>
+  </div><br>
+
+
+  <!--filtro-->
+  <div style="max-width: 80rem; margin: 0 auto; padding: 0 1.5rem;">
+
+    <!-- FILTROS -->
+    <div class="catalog-filters">
+
+        <!-- BUSCADOR -->
+        <div class="search-container">
+            <span class="search-icon">⌕</span>
+
+            <input
+                type="text"
+                id="productSearch"
+                placeholder="Buscar por nombre, diseño, peso..."
+                autocomplete="off"
+            >
+
+            <button id="clearSearch" type="button" aria-label="Limpiar búsqueda">
+                ×
+            </button>
+        </div>
+
+        <!-- CATEGORÍA -->
+        <select id="categoryFilter">
+            <option value="all">Todos los formatos</option>
+            <option value="x10">Paquetes x10</option>
+            <option value="unidad">Por unidad</option>
+        </select>
+
+        <!-- PRECIO -->
+        <select id="priceFilter">
+            <option value="all">Todos los precios</option>
+            <option value="100000">Hasta $100.000</option>
+            <option value="250000">Hasta $250.000</option>
+            <option value="500000">Hasta $500.000</option>
+            <option value="750000">Hasta $750.000</option>
+            <option value="1000000">Hasta $1.000.000</option>
+            <option value="1500000">Hasta $1.500.000</option>
+            <optgroup label="Ordenar por precio">
+                <option value="sort-asc">Precio: menor a mayor</option>
+                <option value="sort-desc">Precio: mayor a menor</option>
+            </optgroup>
+        </select>
+
+        <select id="gridColumnsFilter" aria-label="Productos por fila">
+          <option value="1">1 por fila</option>
+          <option value="2" selected>2 por fila</option>
+          <option value="3">3 por fila</option>
+          <option value="4">4 por fila</option>
+        </select>
+
+    </div>
+
+    <!-- INFORMACIÓN DE RESULTADOS -->
+    <div id="filterInfo" class="filter-info">
+        Mostrando todos los productos
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div
+        id="productGrid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Pulsera" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #3 X10</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$121.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Pulsera" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #4 X10</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$221.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Pulsera" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #5 X10</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$316.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Pulsera" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #6 X10</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$518.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Pulsera" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #7 X10</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$712.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Pulsera" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #8 X10</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$948.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Balín diamantado número 3, venta por unidad" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k · Unidad</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #3 · Unidad</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$14.500</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Balín diamantado número 4, venta por unidad" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k · Unidad</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #4 · Unidad</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$26.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Balín diamantado número 5, venta por unidad" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k · Unidad</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #5 · Unidad</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$37.500</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Balín diamantado número 6, venta por unidad" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k · Unidad</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #6 · Unidad</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$58.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Balín diamantado número 7, venta por unidad" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k · Unidad</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #7 · Unidad</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$80.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div style="position: relative; overflow: hidden; background: #111; aspect-ratio: 3/4;">
+          <img src="img/balines.jpg" alt="Balín diamantado número 8, venta por unidad" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; gap: 0.75rem;"></div>
+        </div>
+        <div style="padding-top: 1.25rem;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(201,169,97,0.6); text-transform: uppercase; margin-bottom: 0.25rem;">Balines · Oro 18k · Unidad</div>
+          <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Balin Diamantado #8 · Unidad</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #c9a961; font-family: 'Playfair Display', serif; font-size: 1.125rem;">$120.000</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
